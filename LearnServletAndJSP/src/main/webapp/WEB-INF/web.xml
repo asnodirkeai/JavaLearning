@@ -1,0 +1,35 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.soika.servletandJSP.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>soika.andrey@gmail.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>haahhaah@gmail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello.do</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class>com.soika.servletandJSP.listener.MyServletContextListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>dog-breed</param-name>
+        <param-value>Taxa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dog-nick</param-name>
+        <param-value>Maga</param-value>
+    </context-param>
+
+</web-app>
